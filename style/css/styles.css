@@ -21,9 +21,8 @@ body {
 }
 
 .header_text {
-    font-family: "Rubik Doodle Shadow";
+    font-family: "Oleo Script";
     font-size: 50px;
-    font-weight: bold;
     color: white;
     text-align: center;
     margin-top: 20px;
@@ -31,6 +30,7 @@ body {
 }
 
 .buttons {
+    font-family: "Oleo Script";
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -41,6 +41,7 @@ body {
 }
 
 .btn {
+    font-family: "Oleo Script";
     background-color: #0073c4;
     color: white;
     padding: 15px 32px;

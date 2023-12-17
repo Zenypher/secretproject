@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style/css/styles.css">
     </head> 
     <body>
@@ -13,17 +13,19 @@
                 <h1 class = "header_text">Who has the most beautiful eyes? 😶‍🌫️</h1>
             </div>
             <div class="gif_container">
-                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWYybTFjeXJld3phYmk1cW8zYnphbjU5MWgxY3Q3aXF0ZjlkeDd3ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11EEXw1EIEoHaE/giphy.gif" alt="Cute animated illustration">
+                <img src="https://media.giphy.com/media/B5AVgxf0OzlyE/giphy.gif" alt="Cute animated illustration">
             </div>
             <div class = "buttons">
                 <button class="btn" id = "yesButton" onclick="nextPage()">Me</button>
                 <button class="btn" id = "noButton" onmouseover="moveButton()", onclick="moveButton()">Not me</button>
                 <script>
+                    var noTimesClicked = 0;
                     function nextPage() {
                         window.location.href = "yes.html";
                     }
                     
                     function moveButton() {
+                        noTimesClicked++;
                         const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
                         var viewportheight = window.innerHeight;
                         var viewportwidth = window.innerWidth;
@@ -35,6 +37,10 @@
                         noButton.style.backgroundColor = `#f70021`;
                         noButton.style.fontWeight = `900`;
                         noButton.innerHTML = "WRONG!";
+                    }
+                    if(noTimesClicked >= 10) {
+                            var mainText = document.getElementsByClassName('header_text');
+                            mainText.innerHTML = "You're kidding me... 😒🙄";
                     }
                 </script> 
             </div>
